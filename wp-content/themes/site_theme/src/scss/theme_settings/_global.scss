@@ -1,0 +1,34 @@
+.container {
+	width: 100%;
+	max-width: $container-width;
+	margin: 0 auto;
+	padding: 0;
+}
+
+//.wpcf7-response-output {
+//    display: none!important;
+//}
+
+html {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	line-height: normal;
+	color: $coal;
+
+	@include breakpoint(480 down) {
+		font-size: 2.084vw;
+	}
+
+	a {
+		font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	}
+
+	&.mobile-menu-open {
+		overflow: hidden;
+	}
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}

@@ -1,0 +1,72 @@
+.imageTextBlock {
+	$self: &;
+	padding: 6rem 0;
+
+	.container {
+		padding: 0 1.5rem;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+
+		@include breakpoint(small only) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__image {
+		border-radius: 0.4rem;
+		overflow: hidden;
+		grid-column: 9 / 13;
+		grid-row: 1 / 2;
+
+		@include breakpoint(small only) {
+			grid-column: auto;
+			grid-row: auto;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__content {
+		grid-column: 1 / 10;
+		grid-row: 1 / 2;
+		background-color: #fff;
+		padding: 5.1rem 3.1rem;
+		margin-top: 6.5rem;
+		border-radius: 0.4rem;
+		box-shadow: 0 0 11px rgba(#000, 0.2);
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint(small only) {
+			grid-column: auto;
+			grid-row: auto;
+			width: calc(100% - 3rem);
+			margin: -5rem auto 0 auto;
+			padding: 3.5rem 3rem;
+		}
+
+		&--left {
+			align-items: flex-start;
+		}
+		&--center {
+			align-items: center;
+			text-align: center;
+		}
+		&--right {
+			align-items: flex-end;
+			text-align: right;
+		}
+	}
+
+	&__text {
+		margin-bottom: 3rem;
+	}
+
+	&--flipped {
+	}
+}

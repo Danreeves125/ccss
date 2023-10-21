@@ -1,0 +1,143 @@
+.page {
+	$self: &;
+
+	&__section {
+		position: relative;
+
+		&:before {
+			content: "";
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(240, 240, 240, 1) 100%);
+			height: 20rem;
+		}
+
+		&--pb {
+			padding-bottom: 6.7rem;
+
+			@include breakpoint(small only) {
+				padding-bottom: 3rem;
+			}
+		}
+	}
+
+	&__text-top {
+		text-align: center;
+		max-width: 80rem;
+		padding: 0 1.5rem;
+		margin: 0 auto 5.1rem auto;
+
+		@include breakpoint(small only) {
+			margin-bottom: 3rem;
+		}
+
+		&--large {
+			max-width: 92.8rem;
+		}
+	}
+
+	&__blocks {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 4rem;
+		padding: 0 1.5rem;
+
+		@include breakpoint(730 down) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__block {
+	}
+
+	&__block-inner {
+		padding: 4.2rem 3.4rem;
+		padding-bottom: 8.8rem;
+
+		@include breakpoint(small only) {
+			padding: 3rem;
+		}
+
+		&--box-shadow {
+			box-shadow: 0 0 11px rgba(#000, 0.16);
+		}
+
+		.text {
+			margin: 2.6rem 0;
+		}
+
+		.column {
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 100%;
+				max-width: 22.1rem;
+				margin-left: auto;
+				padding-left: 1.5rem;
+			}
+		}
+	}
+
+	&__contact-details {
+		list-style: none;
+		margin: 3.8rem 0 0 0;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+
+		li {
+			&:not(:last-of-type) {
+				&:after {
+					content: "";
+					width: 7.6rem;
+					height: 0.4rem;
+					background-color: $grey;
+					display: block;
+					border-radius: 0.4rem;
+					margin: 2.6rem 0;
+				}
+			}
+
+			.button {
+				margin-top: 3rem;
+			}
+		}
+
+		.title {
+			font-weight: bold;
+			color: $purple;
+			margin-bottom: 1.2rem;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+	}
+
+	&__download-block {
+		background-color: $purple;
+		padding: 4.2rem 3.4rem;
+		margin-top: 3.5rem;
+
+		span,
+		p {
+			color: #fff;
+			font-weight: bold;
+		}
+
+		p {
+			margin-top: 1rem;
+			margin-bottom: 2.4rem;
+		}
+
+		@include breakpoint(small only) {
+			padding: 3rem;
+		}
+	}
+}

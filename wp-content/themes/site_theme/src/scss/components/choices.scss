@@ -1,0 +1,50 @@
+.choices {
+    width: rem-calc(119);
+    margin: rem-calc(0 15);
+    text-align: left;
+    position: relative;
+    z-index: 3;
+
+    &:after {
+        content: '\f054';
+        font-family: $fa;
+        font-weight: 900;
+        color: $neon;
+    }
+
+    &__inner {
+        border: rem-calc(1) solid $dark-grey;
+        background-color: #fff;
+    }
+
+    &__item {
+        font-family: $body;
+        font-size: rem-calc(20);
+        color: $coal;
+
+        &--selectable {
+            &:after {
+                color: #fff;
+                opacity: 1;
+            }
+        }
+
+        &--choice {
+            &:hover {
+                background: linear-gradient(230deg, $red 0%, $violet 50%, $blue 100%);
+                color: #fff;
+            }
+        }
+    }
+
+    &__placeholder {
+        opacity: 1;
+    }
+
+    &__list {
+
+        &--dropdown {
+
+        }
+    }
+}

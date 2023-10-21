@@ -1,0 +1,203 @@
+.footer {
+	width: 100%;
+	background-color: $purple;
+	padding: 7.5rem 0 5rem 0;
+
+	@include breakpoint(medium down) {
+		padding: 5rem 0;
+	}
+
+	@include breakpoint(small only) {
+		padding: 3rem 0;
+	}
+
+	&__newsletter {
+		width: 100%;
+		background-color: $coal;
+		padding: 3.9rem 0;
+	}
+
+	&__newsletter-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 3rem;
+		flex-wrap: wrap;
+		padding: 0 1.5rem;
+
+		@include breakpoint(small only) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.text {
+			display: flex;
+			align-items: center;
+
+			@include breakpoint(small only) {
+				flex-direction: column;
+
+				svg {
+					margin-bottom: 3rem;
+					margin-right: 0;
+				}
+			}
+
+			svg {
+				margin-right: 3.5rem;
+
+				@include breakpoint(small only) {
+					margin-right: 0;
+				}
+			}
+
+			p {
+				flex: 1 0 0;
+				margin-bottom: 0;
+				font-size: 2.5rem;
+				line-height: 3rem;
+				color: #fff;
+
+				@include breakpoint(small only) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__columns {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 2.5rem;
+		padding: 0 1.5rem;
+		margin-bottom: 5rem;
+
+		@include breakpoint(640 down) {
+			grid-template-columns: 1fr;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__column {
+	}
+
+	&__title {
+		font-size: 2rem;
+		line-height: 2.5rem;
+		color: #fff;
+		font-weight: bold;
+		margin-bottom: 2.2rem;
+		padding-bottom: 2.7rem;
+		position: relative;
+
+		&:after {
+			content: "";
+			width: 5.3rem;
+			height: 0.4rem;
+			background-color: #fff;
+			opacity: 0.16;
+			border-radius: 0.4rem;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__links {
+		list-style: none;
+		margin: 0;
+	}
+
+	&__link {
+		font-size: 1.6rem;
+		line-height: 2.1rem;
+		color: #fff;
+
+		&:not(:last-of-type) {
+			margin-bottom: 1.2rem;
+		}
+
+		a {
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+		}
+	}
+
+	&__middle {
+		display: flex;
+		align-items: center;
+		padding: 0 1.5rem;
+		justify-content: space-between;
+
+		@include breakpoint(1100 down) {
+			flex-wrap: wrap;
+		}
+
+		@include breakpoint(500 down) {
+			flex-direction: column;
+		}
+
+		.social {
+			margin: 0 1.5rem;
+
+			@include breakpoint(500 down) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+
+	&__logo {
+		width: 24.3rem;
+
+		@include breakpoint(500 down) {
+			margin-bottom: 3rem;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__logos {
+		width: 58.9rem;
+
+		@include breakpoint(1100 down) {
+			width: 100%;
+			margin-top: 1.5rem;
+		}
+
+		@include breakpoint(500 down) {
+			margin-top: 0;
+		}
+	}
+
+	&__bottom {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 1.5rem;
+		grid-gap: 1.5rem;
+		text-align: center;
+		margin-top: 2.3rem;
+
+		@include breakpoint(medium down) {
+			flex-wrap: wrap;
+		}
+
+		p {
+			color: #fff;
+			margin: 0;
+			padding: 0;
+			font-size: 1.3rem;
+			line-height: 1.5rem;
+
+			@include breakpoint(1024 down) {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}

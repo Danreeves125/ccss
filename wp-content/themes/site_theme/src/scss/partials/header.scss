@@ -1,0 +1,277 @@
+.header {
+    $self: &;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    transition: ease-in-out 1s;
+    box-shadow: 0 3px 11px rgba(#000, 0.12);
+
+    @include breakpoint(1131 up) {
+        z-index: 3;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    &__logo {
+        width: 26.5rem;
+        display: block;
+        padding: 1.5rem 0 1.5rem 1.5rem;
+
+        @include breakpoint(1130 down) {
+            width: 22rem;
+        }
+
+        @include breakpoint(640 down) {
+            width: 15rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        flex: 1 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+    }
+
+    &__top,
+    &__cta {
+        background-color: $light-grey;
+        padding: 1.4rem 2.4rem;
+        border-radius: 0 0 1.5rem 1.5rem;
+        text-align: center;
+
+        @include breakpoint(1130 down) {
+            padding: 1rem;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $purple;
+
+            a {
+                color: $dark-grey;
+            }
+        }
+    }
+
+    &__cta {
+        @include breakpoint(640 down) {
+            display: none;
+        }
+    }
+
+    &__top {
+        width: 100%;
+        display: none;
+        text-align: center;
+        border-radius: 0;
+        justify-content: center;
+
+        @include breakpoint(640 down) {
+            display: flex;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+
+        @include breakpoint(1130 down) {
+            flex: 1 0 0;
+        }
+    }
+
+    &__nav {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        grid-gap: 2.5rem;
+        height: 10rem;
+
+        @include breakpoint(1130 down) {
+            display: none;
+        }
+
+        > li {
+            //padding-bottom: 5.5rem;
+            position: relative;
+            font-size: 1.6rem;
+            line-height: 2.1rem;
+            color: $dark-grey;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            &:not(:last-of-type) {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 0.4rem;
+                    background-color: $purple;
+                    left: 0;
+                    bottom: 0;
+                    opacity: 0;
+                    transition: ease 0.5s;
+                }
+            }
+
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+
+                .sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: visible;
+                }
+            }
+
+            a {
+                color: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
+
+            &:last-of-type {
+                margin-left: 4rem;
+
+                @include breakpoint(1130 down) {
+                    margin-left: 0;
+                }
+
+                a {
+                    width: 14.4rem;
+                    height: 4.8rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 2.5rem;
+                    background-color: $purple;
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .sub-menu {
+            position: absolute;
+            bottom: 0;
+            left: -1.5rem;
+            width: 27rem;
+            transform: translate3d(0, 100%, 0);
+            list-style: none;
+            margin: 0;
+            box-shadow: inset 0px 26px 11px -13px rgba(#000, 0.12);
+            background-color: #fff;
+            border-radius: 0 0 0.5rem 0.5rem;
+            padding: 3rem;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: ease 0.5s;
+
+            li {
+                font-size: 1.6rem;
+                line-height: 2.1rem;
+                color: $dark-grey;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 1.6rem;
+                }
+            }
+        }
+    }
+
+    &__hamburger {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 0.4rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+        background-color: $purple;
+
+        @include breakpoint(1130 down) {
+            display: flex
+        }
+
+        .bars {
+            height: 2.4rem;
+            width: 3.7rem;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .bar {
+            background: #fff;
+            transform: translateY(-50%) rotate(0deg);
+            position: absolute;
+            width: 100%;
+            height: 0.4rem;
+            border-radius: 0.2rem;
+            transition: top 0.1s ease 0.3s, transform 0.3s ease, background 0.1s ease 0.3s;
+            left: 0;
+
+            &:nth-child(1) {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+            }
+
+            &:nth-child(3) {
+                top: 100%;
+            }
+        }
+
+        &--active {
+
+            .bars {
+                .bar {
+                    transition: top 0.1s ease, transform 0.3s ease 0.1s, background 0.1s ease;
+                    background-color: #fff;
+
+                    &:nth-child(1) {
+                        top: 50%;
+                        transform: translateY(-50%) rotate(315deg);
+                    }
+
+                    &:nth-child(2) {
+                        transform: translateY(-50%) rotate(405deg);
+                    }
+
+                    &:nth-child(3) {
+                        top: 50%;
+                        transform: translateY(-50%) rotate(405deg);
+                    }
+                }
+            }
+
+            & > span:not(.bars) {
+                color: #fff;
+            }
+        }
+    }
+}

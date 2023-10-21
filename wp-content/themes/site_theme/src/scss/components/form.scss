@@ -1,0 +1,262 @@
+.wpcf7-form {
+	//    width: rem-calc(925);
+	//    display: flex;
+	//    flex-direction: row;
+	//    flex-wrap: wrap;
+	//    justify-content: space-between;
+	//    margin: 0 auto;
+
+	//    @include breakpoint(925 down) {
+	//        width: 100%;
+	//        padding: rem-calc(0 15);
+	//    }
+
+	//    .wpcf7-form-control-wrap {
+	//        width: 100%;
+	//    }
+
+	.wpcf7-acceptance {
+		.wpcf7-list-item {
+			width: 100%;
+			margin: 0;
+
+			label {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				position: relative;
+				cursor: pointer;
+
+				input {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 0;
+					height: 0;
+					opacity: 0;
+
+					&:checked {
+						+ span {
+							&:before {
+								background-color: $purple;
+								border-color: $purple;
+								background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4yODkiIGhlaWdodD0iMTEuMDAzIiB2aWV3Qm94PSIwIDAgMTQuMjg5IDExLjAwMyI+PHBhdGggZD0iTTEzLjYyLDIuNjA4LDUuNCwxMC44MjgsMi4zOCw3LjgwOGEuMzc1LjM3NSwwLDAsMC0uNTMsMGwtLjg4NC44ODRhLjM3NS4zNzUsMCwwLDAsMCwuNTNsNC4xNjksNC4xNjlhLjM3NS4zNzUsMCwwLDAsLjUzLDBsOS4zNjktOS4zNjlhLjM3NS4zNzUsMCwwLDAsMC0uNTNsLS44ODQtLjg4NEEuMzc1LjM3NSwwLDAsMCwxMy42MiwyLjYwOFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0wLjg1NSAtMi40OTkpIiBmaWxsPSIjZmZmIi8+PC9zdmc+");
+								background-position: 50% 50%;
+								background-repeat: no-repeat;
+								background-size: 2rem;
+							}
+						}
+					}
+				}
+			}
+
+			.wpcf7-list-item-label {
+				position: relative;
+				min-height: 3rem;
+				padding-left: 4.5rem;
+
+				&:before {
+					content: "";
+					width: 3rem;
+					height: 3rem;
+					border: 0.1rem solid $grey;
+					display: block;
+					border-radius: 0.4rem;
+					margin-right: 1rem;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 0;
+				}
+
+				a {
+					text-decoration: underline;
+					color: $purple;
+				}
+			}
+		}
+	}
+}
+
+.form {
+	&--donate {
+		width: 50%;
+		padding: 0 1.5rem;
+
+		@include breakpoint(735 down) {
+			width: 100%;
+		}
+	}
+
+	&__donate-select {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.4rem;
+		margin-bottom: 2.4rem;
+
+		span {
+			font-size: 1.6rem;
+			line-height: 2.1rem;
+			font-weight: bold;
+			color: #fff;
+			grid-column: -1 / 1;
+		}
+
+		input {
+			&:checked + label {
+				font-weight: bold;
+				background-color: #fff;
+				color: $purple;
+			}
+		}
+
+		label {
+			background-color: rgba(#fff, 0.8);
+			border-radius: 0.5rem;
+			color: $dark-grey;
+			height: 6.1rem;
+			font-size: 1.6rem;
+			line-height: 2.1rem;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__donate-amount {
+		width: 100%;
+
+		label {
+			display: flex;
+			width: 100%;
+			font-size: 1.6rem;
+			line-height: 2.1rem;
+			font-weight: bold;
+			color: #fff;
+			margin-bottom: 1.4rem;
+			flex-wrap: wrap;
+
+			span {
+				margin-left: auto;
+				font-weight: 400;
+			}
+		}
+
+		input {
+			background-repeat: no-repeat;
+			background-position: 2.4rem 50%;
+			width: 100%;
+			box-shadow: none;
+			border-radius: 0.4rem;
+			background-color: #fff;
+			height: 6.1rem;
+			margin-bottom: 2.3rem;
+			padding-left: 4.5rem;
+		}
+	}
+
+	&__wrapper {
+		margin-top: 2.5rem;
+	}
+
+	&__group {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 2.6rem;
+
+		span {
+			width: 100%;
+			display: block;
+		}
+
+		.wpcf7-not-valid-tip {
+			display: none;
+		}
+	}
+
+	input {
+		box-shadow: none;
+		border: 0;
+		font-size: 1.6rem;
+
+		&::placeholder {
+			color: $grey;
+			opacity: 1;
+		}
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+
+	&__label {
+		font-size: 1.6rem;
+		line-height: 2.1rem;
+		font-weight: bold;
+		margin-bottom: 1.2rem;
+		width: 100%;
+	}
+
+	&__input,
+	&__textarea,
+	&__select {
+		width: 100%;
+		height: 6.1rem;
+		padding-left: 2rem;
+		font-size: 1.6rem;
+		border: 0.1rem solid $grey;
+		border-radius: 0.4rem;
+		outline: none;
+		background-color: #fff;
+
+		@include breakpoint(small only) {
+			font-size: 16px;
+		}
+
+		&.wpcf7-not-valid {
+			border: 0.1rem solid rgb(209, 57, 57);
+		}
+
+		&:focus {
+			border-color: $purple;
+		}
+
+		@include placeholder {
+			color: $grey;
+			opacity: 1;
+		}
+	}
+
+	&__select {
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMy44MzkiIGhlaWdodD0iNy45MTQiIHZpZXdCb3g9IjAgMCAxMy44MzkgNy45MTQiPg0KICA8cGF0aCBpZD0iUGF0aF82NTgiIGRhdGEtbmFtZT0iUGF0aCA2NTgiIGQ9Ik0xMy44MDksNS4yMjhsLS42MTktLjYxOWEuMzc1LjM3NSwwLDAsMC0uNTMxLDBMNywxMC4yNTYsMS4zNDEsNC42MDlhLjM3NS4zNzUsMCwwLDAtLjUzMSwwbC0uNjE5LjYxOWEuMzc1LjM3NSwwLDAsMCwwLC41MzFMNi43MzQsMTIuM2EuMzc1LjM3NSwwLDAsMCwuNTMxLDBsNi41NDQtNi41NDRBLjM3NS4zNzUsMCwwLDAsMTMuODA5LDUuMjI4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuMDggLTQuNDk5KSIgZmlsbD0iIzc4MjE4MSIvPg0KPC9zdmc+DQo=");
+		background-repeat: no-repeat;
+		background-position: calc(100% - 2rem) 50%;
+		background-size: 2rem;
+		appearance: none;
+	}
+
+	&__textarea {
+		height: 18.5rem;
+		padding-top: 2rem;
+	}
+
+	&__options {
+		margin: 0;
+		list-style: none;
+
+		li {
+			&:not(:last-of-type) {
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
+}

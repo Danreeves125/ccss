@@ -1,0 +1,46 @@
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins",
+# "mu-plugins" and "themes" directories.
+wp-content/*
+wp-content/plugins/
+!wp-content/mu-plugins/
+!wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-content/themes/*
+!wp-content/themes/site_theme/
+
+
+# Extra Stuff
+
+# Ignore automatically generated cruft
+*.log
+.sass-cache
+node_modules/
+
+# Ignore config
+local-config.php
+
+# Operating system files
+.Spotlight-V100
+.Trashes
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+# Vagrant
+.vagrant
+
+# Dev
+.vscode
+yarn.lock
+assets/img/products/

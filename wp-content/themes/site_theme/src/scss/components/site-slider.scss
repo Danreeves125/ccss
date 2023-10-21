@@ -1,0 +1,150 @@
+.slider {
+	&__footer-logos {
+		overflow: hidden;
+
+		.swiper-slide {
+			.image {
+				background-color: #fff;
+				height: 7.2rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 1rem;
+				border-radius: 0.5rem;
+
+				img {
+					width: auto;
+					max-height: 4.8rem;
+				}
+			}
+		}
+	}
+
+	&__usps {
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: auto;
+
+			.icon {
+				margin-right: 1.5rem;
+			}
+
+			p {
+				margin: 0;
+				color: #000;
+			}
+		}
+	}
+
+	&__mission-images {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 3.5rem;
+
+		.swiper-wrapper {
+			.swiper-slide {
+				height: auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__testimonials {
+		margin: 0 2.5rem;
+		overflow: hidden;
+
+		.swiper-slide {
+			text-align: center;
+
+			svg {
+				margin-bottom: 2.3rem;
+				opacity: 0.3;
+			}
+
+			.name {
+				margin-top: 1.5rem;
+				font-family: $secondary-font;
+				font-size: 2.5rem;
+				line-height: 3rem;
+				color: $purple;
+			}
+		}
+	}
+
+	&__news {
+		.swiper-slide {
+			padding: 1.5rem;
+			height: auto;
+		}
+	}
+
+	&__arrow {
+		width: auto;
+		height: auto;
+		cursor: pointer;
+
+		svg {
+			width: 1.2rem;
+			height: auto;
+			path {
+				fill: $purple;
+			}
+		}
+
+		&.swiper-button-disabled {
+			opacity: 0.3;
+		}
+
+		&--prev {
+			margin-right: 1.5rem;
+		}
+
+		&--next {
+			margin-left: 1.5rem;
+		}
+	}
+
+	&__dots {
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 3.3rem;
+
+		@include breakpoint(small only) {
+			margin-top: 1.9rem;
+		}
+
+		&.swiper-pagination-bullets.swiper-pagination-horizontal {
+			bottom: 0;
+		}
+
+		.swiper-pagination-bullet {
+			width: 0.6rem;
+			height: 0.6rem;
+			background-color: $grey;
+			opacity: 1;
+
+			&-active {
+				background-color: $purple;
+			}
+		}
+	}
+}

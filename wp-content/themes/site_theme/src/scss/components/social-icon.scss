@@ -1,0 +1,24 @@
+.social {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    &__item {
+
+        &:not(:last-of-type) {
+            margin-right: rem-calc(15);
+        }
+
+        a {
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 50%;
+            background-color: rgba(#fff, 0.16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}

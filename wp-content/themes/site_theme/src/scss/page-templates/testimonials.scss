@@ -1,0 +1,142 @@
+.testimonial {
+    &__section {
+        position: relative;
+
+        &--latest {
+            background-color: $light-grey;
+            padding: 13rem 0;
+            overflow: hidden;
+
+            @media(max-width: 1024px) {
+                padding: 6rem 0;
+            }
+        }
+
+        .hand {
+            position: absolute;
+
+            &--top {
+                top: -16.5rem;
+                right: 0;
+
+                @media(max-width: 1024px) {
+                    right: -5rem;
+                    top: -18rem;
+                }
+            }
+
+            &--bottom {
+                bottom: -27.5rem;
+                left: -5rem;
+
+                @media(max-width: 1024px) {
+                    bottom: -29rem;
+                    left: -9rem;
+                }
+
+                @media(max-width: 790px) {
+                    
+                }
+            }
+        }
+    }
+
+    &__inner {
+        width: calc(100% - 30px);
+        background-color: #fff;
+        margin: 0 auto;
+        box-shadow: 0 3px 11px rgba(#000, 0.25);
+        position: relative;
+        z-index: 2;
+        padding: 7.7rem 6.6rem;
+        border-radius: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media(max-width: 1024px) {
+            padding: 3rem;
+        }
+
+        @media(max-width: 790px) {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    &__left {
+        border-right: 0.1rem solid $light-grey;
+        padding-right: 6.5rem;
+        margin-right: 6.5rem;
+
+        @media(max-width: 1024px) {
+            padding-right: 3rem;
+            margin-right: 3rem;
+        }
+
+        @media(max-width: 790px) {
+            padding-right: 0;
+            margin: 0;
+            text-align: center;
+            border: 0;
+
+            .button {
+                display: none;
+            }
+        }
+
+
+        .title {
+            color: $purple;
+            font-size: 3rem;
+            line-height: 3.5rem;
+            margin-bottom: 3.4rem;
+            font-weight: bold;
+
+            @media(max-width: 1024px) {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+
+            @media(max-width: 790px) {
+                margin-bottom: 3rem;
+            }
+
+            &:before {
+                content: '';
+                background-color: rgba(#909599, 0.16);
+                height: 0.4rem;
+                width: 7.6rem;
+                display: block;
+                border-radius: 0.2rem;
+                margin-bottom: 2.2rem;
+
+                @media(max-width: 790px) {
+                    margin: 0 auto 2rem auto;
+                }
+            }
+        }
+    }
+
+    &__right {
+        flex: 1 0 0;
+        overflow: hidden;
+        width: 100%;
+
+        @media(max-width: 790px) {
+            margin-bottom: 3rem;
+
+        }
+    }
+
+    &__mobile-button {
+        display: none;
+
+        @media(max-width: 790px) {
+            display: block;
+        }
+
+         .button {
+            margin: 0 auto;
+         }
+    }
+}

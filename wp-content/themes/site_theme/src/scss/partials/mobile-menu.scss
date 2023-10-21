@@ -1,0 +1,118 @@
+html {
+	&.mobile-menu-open {
+		body {
+			overflow: hidden;
+
+            .mobile-overlay {
+                opacity: 1!important;
+                pointer-events: initial;
+            }
+		}
+	}
+}
+.mobile-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(#000, 0.4);
+    top: 0;
+}
+
+.mobile {
+    $self: &;
+    top: 0;
+    width: 32rem;
+    height: 100%;
+    position: fixed;
+    background: $purple;
+    flex-wrap: wrap;
+    transition: ease, 0.5s;
+    transform: translate3d(-100%, 0, 0);
+    z-index: 1000;
+    padding: 1.5rem 0;
+
+    &--open {
+		transform: translate3d(0, 0, 0) !important;
+	}
+
+    &__inner {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__links {
+        width: 100%;
+        list-style: none;
+        margin: 0;
+    }
+
+    &__link {
+        color: #fff;
+        font-weight: 600;
+        position: relative;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        border-top: 1px solid #fff;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4LjUxMiIgaGVpZ2h0PSIxNS42ODMiIHZpZXdCb3g9IjAgMCA4LjUxMiAxNS42ODMiPjxwYXRoIGQ9Ik0tOC4zODQtMTQuNDY4bC0uMjQ5LjI0OWEuNDIyLjQyMiwwLDAsMCwwLC42TC0xLjc2LTYuNzUtOC42MzIuMTIzYS40MjIuNDIyLDAsMCwwLDAsLjZsLjI0OS4yNDlhLjQyMi40MjIsMCwwLDAsLjYsMGw3LjQyLTcuNDJhLjQyMi40MjIsMCwwLDAsMC0uNmwtNy40Mi03LjQyQS40MjIuNDIyLDAsMCwwLTguMzg0LTE0LjQ2OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDguNzU2IDE0LjU5MikiIGZpbGw9IiNmZmYiLz48L3N2Zz4=");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 1.5rem) 50%;
+
+        &:last-of-type {
+            border-bottom: 1px solid #fff;
+        }
+
+        a {
+            font-family: inherit;
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+            display: block;
+            padding: 1rem 1.5rem;
+        }
+
+        &--drilldown {
+            &.drilldown-open {
+                #{$self}__drilldown {
+                    opacity: 1;
+                    z-index: 1000;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    &__drilldown {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        transition: ease, 0.5s;
+        overflow-y: auto;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -10;
+
+    }
+
+    &__back {
+        min-width: 20rem;
+        min-height: 5rem;
+        border-radius: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 500;
+        margin: 0 auto 3.5rem auto;
+        cursor: pointer;
+    }
+}

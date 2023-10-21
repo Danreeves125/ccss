@@ -1,0 +1,30 @@
+.breadcrumbs {
+	width: 100%;
+	padding: 2.5rem 0 0 0;
+	margin-bottom: 5rem;
+	position: relative;
+	z-index: 2;
+
+	&__list {
+		width: 100%;
+		padding: rem-calc(0 15);
+
+		p {
+			margin-bottom: 0;
+		}
+
+		a,
+		span {
+			color: $coal;
+			font-size: 1.6rem;
+			line-height: 2.1rem;
+			font-weight: 500;
+
+			span {
+				&.breadcrumb_last {
+					color: $purple;
+				}
+			}
+		}
+	}
+}

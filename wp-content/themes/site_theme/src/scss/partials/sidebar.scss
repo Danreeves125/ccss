@@ -1,0 +1,144 @@
+.sidebar {
+    $self: &;
+    padding: rem-calc(0 15);
+
+    &__blocks {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    &__block {
+        width: 100%;
+
+        &:not(:last-of-type) {
+            margin-bottom: rem-calc(40);
+
+            @include breakpoint(small only) {
+                margin-bottom: rem-calc(30);
+            }
+        }
+    }
+
+    &__title {
+        font-family: $primary;
+        color: $neon;
+        @include fluid-type($min_width, $max_width, 25px, 35px);
+        border-bottom: rem-calc(2) solid $neon;
+        padding-bottom: rem-calc(10);
+        margin-bottom: rem-calc(20);
+        font-weight: bold;
+
+        &--violet {
+            color: $violet;
+            border-color: $violet;
+        }
+
+        &--blue {
+            color: $blue;
+            border-color: $blue;
+        }
+    }
+
+    &__posts {
+        width: 100%;
+        list-style: none;
+        margin: 0;
+    }
+
+    &__post {
+        width: 100%;
+        position: relative;
+        padding-left: rem-calc(25);
+
+        &:before {
+            content: '\f054';
+            font-family: $fa;
+            color: $neon;
+            font-size: rem-calc(20);
+            font-weight: 900;
+            position: absolute;
+            top: rem-calc(2);
+            left: 0;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: rem-calc(15);
+        }
+
+        .heading {
+            font-family: $body;
+            color: $coal;
+            font-size: rem-calc(20);
+            line-height: rem-calc(25);
+            font-weight: bold;
+        }
+
+        .date {
+            font-family: $body;
+            color: $coal;
+            font-size: rem-calc(18);
+            line-height: rem-calc(23);
+            font-style: italic;
+        }
+    }
+
+    &__tags {
+        width: 100%;
+
+        a {
+            display: inline-block;
+            border: rem-calc(1) solid $blue;
+            padding: rem-calc(5 15);
+            border-radius: rem-calc(5);
+            font-family: $body;
+            color: $blue;
+            font-size: rem-calc(15);
+            line-height: rem-calc(15);
+            margin: rem-calc(0 5 5 0);
+            transition: ease, 0.5s;
+            
+            &:hover {
+                color: #fff;
+                background-color: $blue;
+            }
+        }
+    }
+
+    &__list {
+        width: 100%;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__list-item {
+        width: 100%;
+        position: relative;
+        padding-left: rem-calc(25);
+
+        &:before {
+            content: '\f054';
+            font-family: $fa;
+            color: $neon;
+            font-size: rem-calc(20);
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: rem-calc(15);
+        }
+
+        a {
+            font-family: $body;
+            color: $coal;
+            font-size: rem-calc(20);
+            line-height: rem-calc(25);
+            font-weight: bold;
+        }
+    }
+}

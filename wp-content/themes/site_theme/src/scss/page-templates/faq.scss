@@ -1,0 +1,41 @@
+.faq {
+	&__banner {
+		height: 27rem;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 1.5rem;
+
+		@include breakpoint(small only) {
+			height: 20rem;
+		}
+	}
+
+	&__banner-inner {
+		max-width: 50rem;
+		width: 100%;
+
+		.a-title {
+			margin: 0;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		text-align: left;
+		height: 4.8rem;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNS45OTkiIGhlaWdodD0iMTYuMDAyIiB2aWV3Qm94PSIwIDAgMTUuOTk5IDE2LjAwMiI+PHBhdGggZD0iTTE1Ljc4MS0uMTY2LDEyLjY2Ni0zLjI4MWEuNzQ5Ljc0OSwwLDAsMC0uNTMxLS4yMTloLS41MDlBNi40NjgsNi40NjgsMCwwLDAsMTMtNy41LDYuNSw2LjUsMCwwLDAsNi41LTE0LDYuNSw2LjUsMCwwLDAsMC03LjUsNi41LDYuNSwwLDAsMCw2LjUtMWE2LjQ2OCw2LjQ2OCwwLDAsMCw0LTEuMzc1di41MDlhLjc0OS43NDksMCwwLDAsLjIxOS41MzFsMy4xMTYsMy4xMTZhLjc0Ny43NDcsMCwwLDAsMS4wNTksMEwxNS43NzguOUEuNzU0Ljc1NCwwLDAsMCwxNS43ODEtLjE2NlpNNi41LTMuNWE0LDQsMCwwLDEtNC00LDQsNCwwLDAsMSw0LTQsNCw0LDAsMCwxLDQsNEE0LDQsMCwwLDEsNi41LTMuNVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMTQpIiBmaWxsPSIjNjU2NTY1Ii8+PC9zdmc+");
+		background-repeat: no-repeat;
+		background-position: 2rem 50%;
+		border-radius: 0.5rem;
+		padding-left: 4.6rem;
+	}
+
+	&__bottom-text {
+		width: 100%;
+		border: 0.1rem solid $grey;
+		border-radius: 0.4rem;
+		padding: 3rem;
+	}
+}

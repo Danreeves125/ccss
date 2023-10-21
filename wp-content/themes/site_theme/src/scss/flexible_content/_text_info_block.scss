@@ -1,0 +1,48 @@
+.textBlock {
+	padding: 3rem 0;
+
+	.container {
+		display: flex;
+		align-items: flex-start;
+		padding: 1.5rem;
+
+		@include breakpoint(720 down) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__text {
+		flex: 1 0 0;
+		padding-right: 5.3rem;
+
+		@include breakpoint(720 down) {
+			width: 100%;
+			padding: 0;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__info {
+		width: 39.2rem;
+		box-shadow: 0 0.3rem 1.2rem rgba(#000, 0.2);
+		padding: 5rem;
+
+		@include breakpoint(720 down) {
+			width: 100%;
+			padding: 3rem;
+		}
+
+		.title {
+			color: $purple;
+			font-weight: bold;
+			margin-bottom: 2.3rem;
+		}
+		.text {
+			margin-bottom: 3.3rem;
+
+			ul {
+				margin-left: 1.5rem;
+			}
+		}
+	}
+}

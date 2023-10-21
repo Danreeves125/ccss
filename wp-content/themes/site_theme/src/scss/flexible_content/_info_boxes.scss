@@ -1,0 +1,54 @@
+.infoBoxes {
+	padding: 6rem 0;
+
+	.container {
+		padding: 0 1.5rem;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 7rem 4rem;
+
+		@include breakpoint(small only) {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+	&__image {
+		position: relative;
+		z-index: 1;
+		img {
+			max-width: 60rem;
+			max-height: 30rem;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			border-radius: 1rem;
+			overflow: hidden;
+		}
+	}
+
+	&__text {
+		margin: -3rem 3rem 0 3rem;
+		padding: 4rem;
+		border-radius: 1rem;
+		position: relative;
+		z-index: 2;
+		background-color: #fff;
+		box-shadow: 0 0 1.1rem rgba(#000, 0.2);
+		flex: 1 0 0;
+
+		@include breakpoint(small only) {
+			margin-inline: 1.5rem;
+		}
+
+		p {
+			font-weight: bold;
+		}
+	}
+}

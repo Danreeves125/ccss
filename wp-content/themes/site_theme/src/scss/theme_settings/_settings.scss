@@ -1,0 +1,50 @@
+//  WMM Theme Settings
+//  -----------------------------
+//
+//  Table of Contents:
+
+/*
+    0. Variables
+    1. Global
+    2. Breakpoints
+    3. Typography
+    4. Forms
+    5. Checkbox
+*/
+
+@import "unit";
+@import "breakpoints";
+
+// 1. Variables
+// --------------
+$fallback-fonts: Helvetica, Arial, sans-serif;
+$secondary-font: "Freestyle Script", $fallback-fonts;
+
+$light-grey: hsl(0, 0%, 93%); // #EDEDED
+$grey: hsl(207, 4%, 58%); // #909599
+$dark-grey: hsl(0, 0%, 40%); // #656565
+$coal: hsl(0, 0%, 19%); // #313131
+$purple: hsl(294, 59%, 32%); // #782181
+
+$min_width: 320px;
+$max_width: 1230px;
+$max_font: 55px;
+$min_font: 35px;
+
+// 1. Global
+// --------------
+
+$container-width: 1230px; // Add 30px to any container width to account for 15px of padding either side.
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+	small: 0,
+	medium: 640px,
+	large: 1024px,
+	xlarge: 1200px,
+	xxlarge: 1440px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large);

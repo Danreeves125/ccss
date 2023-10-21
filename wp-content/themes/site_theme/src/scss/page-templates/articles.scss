@@ -1,0 +1,81 @@
+.article {
+    &__section {
+        position: relative;
+
+        &--latest {
+            padding: 6rem 0;
+
+            @include breakpoint(medium only) {
+                padding: 4rem 0;
+            }
+
+            @include breakpoint(small only) {
+                padding: 3rem 0;
+            }
+        }
+
+    }
+
+    &__card {
+        box-shadow: 0 0 11px rgba(#000, 0.16);
+        border-radius: 0.4rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card-image {
+        height: 22.1rem;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+    }
+
+    &__card-details {
+        padding: 3.4rem;
+        flex: 1 0 0;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+            font-weight: bold;
+            color: $dark-grey;
+            margin-bottom: 1rem;
+        }
+
+        .text {
+            flex: 1 0 0;
+            margin-bottom: 1.5rem;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: $purple;
+
+            svg {
+                margin-left: 1rem;
+
+                path {
+                    fill: $purple;
+                }
+            }
+        }
+    }
+}

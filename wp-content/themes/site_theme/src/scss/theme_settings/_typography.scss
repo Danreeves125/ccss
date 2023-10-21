@@ -1,0 +1,146 @@
+.a-title {
+	position: relative;
+	font-weight: bold;
+	font-size: 3.5rem;
+	line-height: 4rem;
+	color: $purple;
+	text-align: center;
+	margin-bottom: 3.4rem;
+	padding: 0 1.5rem 2.4rem 1.5rem;
+
+	@media (max-width: 640px) {
+		font-size: 3rem;
+		line-height: 3.5rem;
+	}
+
+	&:after {
+		content: "";
+		width: 7.6rem;
+		height: 0.4rem;
+		background-color: rgba($purple, 0.16);
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 0.2rem;
+	}
+
+	&--left {
+		text-align: left;
+
+		&:after {
+			left: 0;
+			transform: none;
+		}
+	}
+
+	&--black {
+		color: $coal;
+	}
+
+	&--white {
+		color: #fff;
+
+		&:after {
+			background-color: rgba(#fff, 0.16);
+		}
+	}
+
+	&--no-dash {
+		&:after {
+			display: none;
+		}
+	}
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	margin: 0;
+
+	&.purple {
+		color: $purple;
+	}
+
+	&.bold {
+		font-weight: bold;
+	}
+
+	&.mb-15 {
+		margin-bottom: 1.5rem;
+	}
+	&.mb-30 {
+		margin-bottom: 3rem;
+	}
+}
+
+h2,
+.h2 {
+	font-size: clamp(2.5rem, vw(30px), 3rem);
+	line-height: clamp(3rem, vw(36px), 3.6rem);
+	font-weight: bold;
+
+	a {
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: 600;
+		color: $purple;
+	}
+}
+
+.h3,
+h3 {
+	font-size: clamp(2.2rem, vw(25px), 2.5rem);
+	line-height: clamp(3.2rem, vw(30px), 3rem);
+}
+
+.tagline {
+	font-size: 1.6rem;
+	line-height: 2.1rem;
+	font-weight: bold;
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
+
+p,
+li,
+a {
+	font-size: 1.6rem;
+	line-height: 2.6rem;
+	color: $dark-grey;
+}
+
+p {
+	> a {
+		color: $purple;
+		text-decoration: underline;
+	}
+}
+
+p,
+li {
+}
+
+p,
+ul {
+	margin-bottom: 3rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.dynamic {
+	ul {
+		margin-left: 1.5rem;
+	}
+}
