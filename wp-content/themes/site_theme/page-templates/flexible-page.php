@@ -47,6 +47,9 @@ get_header();
                 case 'info_boxes':
                     include get_stylesheet_directory() . '/includes/flexible/info-boxes.php';
                     break;
+                case 'slider':
+                    include get_stylesheet_directory() . '/includes/flexible/slider.php';
+                    break;
             }
             ?>
         <?php endforeach; ?>
